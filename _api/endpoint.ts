@@ -29,13 +29,13 @@ const app = new Hono().basePath("/api");
 app.get("/", (c) => {
   return c.text("welcome to api routes A page");
 });
-app.get("/b", (c) => {
-  return c.text("welcome to api routes B");
-});
-app.get("/hello", (c) => {
-  return c.json({
-    message: "api/hello Hello Next.js!",
-  });
-});
-
+// app.get("/b", (c) => {
+//   return c.text("welcome to api routes B");
+// });
+// app.get("/hello", (c) => {
+//   return c.json({
+//     message: "api/hello Hello Next.js!",
+//   });
+// });
+serve(app);
 export default handle(app);
