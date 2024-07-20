@@ -38,7 +38,4 @@ app.get("/hello", (c) => {
   });
 });
 
-serve({ ...app, port: 4000 }, (info) => {
-  console.log(`Listening on http://localhost:${info.port}`);
-});
 export default handle(app);

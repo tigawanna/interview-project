@@ -1,0 +1,16 @@
+{
+   
+    "env": {},
+
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "_api/endpoint.ts"
+        },
+        {
+            "src": "/",
+            "dest": "dist/index.html"
+        }
+
+    ]
+}
