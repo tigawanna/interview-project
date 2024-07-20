@@ -1,3 +1,5 @@
+import { Hono } from "hono";
+import { handle } from "hono/vercel";
 // file: _api/endpoint.ts
 
 // Should run on edge runtime
@@ -16,8 +18,18 @@ export const streaming = true;
 //   expiration: 30,
 // };
 
-export default async function handler() {
-  return new Response("Edge Function: OK", {
-    status: 200,
+// export default async function handler() {
+//   return new Response("Edge Function: OK", {
+//     status: 200,
+//   });
+// }
+
+const app = new Hono().basePath("/api");
+
+app.get("/hello", (c) => {
+  return c.json({
+    message: "Hello Next.js!",
   });
-}
+});
+
+export default  handle(app);
