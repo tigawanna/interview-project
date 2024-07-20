@@ -25,7 +25,9 @@ export const streaming = true;
 // }
 
 const app = new Hono()
-
+app.get("/", (c) => {
+  return c.text("welcome to api routes ");
+})
 app.get("/hello", (c) => {
   return c.json({
     message: "Hello Next.js!",
