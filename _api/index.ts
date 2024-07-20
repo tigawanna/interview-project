@@ -30,7 +30,7 @@ app.get("/", (c) => {
 })
 app.get("/hello", (c) => {
   return c.json({
-    message: "Hello Next.js!",
+    message: "api/hello Hello Next.js!",
   });
 });
 
