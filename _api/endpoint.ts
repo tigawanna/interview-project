@@ -25,7 +25,7 @@ export const headers = {
 //   });
 // }
 
-const app = new Hono()
+const app = new Hono().basePath("/api");
 app.get("/", (c) => {
   return c.text("welcome to api routes A page");
 });
