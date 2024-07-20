@@ -24,7 +24,7 @@ export const streaming = true;
 //   });
 // }
 
-const app = new Hono().basePath("/api");
+const app = new Hono()
 
 app.get("/hello", (c) => {
   return c.json({
