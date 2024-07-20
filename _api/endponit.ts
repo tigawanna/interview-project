@@ -3,7 +3,7 @@ import { handle } from "hono/vercel";
 // file: _api/endpoint.ts
 
 // Should run on edge runtime
-export const edge = true;
+// export const edge = true;
 
 // Always add those header to this endpoint
 export const headers = {
@@ -11,7 +11,7 @@ export const headers = {
 };
 
 // Stream the response
-export const streaming = true;
+// export const streaming = true;
 
 // Enable Incremental Static Regeneration for this endpoint
 // export const isr = {
